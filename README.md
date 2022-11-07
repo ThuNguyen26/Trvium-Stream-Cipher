@@ -12,17 +12,15 @@ Bộ tạo khóa là một quá trình trích xuất 15bit trạng thái nhất 
 
 Trước tiên ta cần có khởi tạo các giá trị của trạng thái trong từ các khóa bí mật K và IV như sau
 
-``
+```
 (s1, s2, ..., s93) <- (K1, K2, ..., K80, 0, ..., 0)
-
 (s94, s95, ..., s177) <-(IV1, IV2, ..., IV80, 0, ..., 0)
-
 (s178, s179, ..., s288) <- (0, 0, ..., 0, 1, 1 1)
-``
+```
 
 Các trạng thái được xoay hết 4 chu kì như sau:
 
-``
+```
 for i = 1 to 4 * 288 do:
 
   t1 <- s66 + s91.s92 + s93 + s171
@@ -36,4 +34,4 @@ for i = 1 to 4 * 288 do:
   (s94, s95, ..., s177) <-- (t1, s94, ..., s176)
   
   (s178, s179, ..., s288) <-- (t2, s178, ..., s287)
-``
+```
