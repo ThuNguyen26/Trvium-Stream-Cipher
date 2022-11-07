@@ -29,3 +29,7 @@ for i = 1 to 4 * 288 do:
   (s94, s95, ..., s177) <-- (t1, s94, ..., s176)
   (s178, s179, ..., s288) <-- (t2, s178, ..., s287)
 ```
+
+Ảnh mô tả thuật toán tạo chuỗi khóa:
+
+![Demo thuật toán](https://www.researchgate.net/publication/287417659/figure/fig3/AS:391342275481611@1470314677525/Trivium-stream-cipher.png)
