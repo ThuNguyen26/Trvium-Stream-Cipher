@@ -32,4 +32,4 @@ for i = 1 to 4 * 288 do:
 
 Ảnh mô tả thuật toán tạo chuỗi khóa:
 
-![Demo thuật toán](https://www.researchgate.net/profile/Reza-Ebrahimi-Atani/publication/287417659/figure/fig3/AS:391342275481611@1470314677525/Trivium-stream-cipher.png)
+![image](https://user-images.githubusercontent.com/115722174/200348022-8b356fa9-a222-4391-a57c-aa883f769187.png)
