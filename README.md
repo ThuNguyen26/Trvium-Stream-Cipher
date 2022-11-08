@@ -89,3 +89,5 @@ Với ```Plaintext = 'Hanoi University of Science and Technology'``` ta được
 
 ### Tài liệu tham khảo
 <https://www.ecrypt.eu.org/stream/p3ciphers/trivium/trivium_p3.pdf>
+
+<https://en.wikipedia.org/wiki/Trivium_(cipher)>
