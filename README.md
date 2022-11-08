@@ -10,6 +10,8 @@ Các trạng thái trong gọi là Internal State có độ dài 288bit (s1, s2,
 
 Bộ tạo khóa là một quá trình trích xuất 15bit trạng thái nhất định và sử dụng chũng để cập nhật 3bit trạng thái và tính toán 1bit dòng khóa zi. Sau đó các bit trạng thái được quay và quá trình được lặp lại cho đến khi N <= 2^64 do giới hạn của hệ thống máy tính nhưng thực ra ta chỉ cần lặp đến khi nào khóa có độ dài bằng bản rõ
 
+### Mô tả thuật toán
+
 Trước tiên ta cần có khởi tạo các giá trị của trạng thái trong từ các khóa bí mật K và IV như sau:
 
 ```
