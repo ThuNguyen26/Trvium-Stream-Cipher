@@ -85,7 +85,9 @@ Sau khi thực hiện tạo khóa z thì ta được Key Stream dạng Hexa là
 
 ```Key Stream = 'A4386C6D7624983FEA8DBE7314E5FE1F9D102004C2CEC99AC3BFBF003A66433F3089A98FAD8512C49D7A'```
 
-Với ```Plaintext = 'Hanoi University of Science and Technology'``` ta được ```Ciphertext = 'ìYÍQûÛgf½F$­ ÿ­ÜÚ ['dìÊçÃê~«ú'```
+Với ```Plaintext = 'Hanoi University of Science and Technology'``` ta được 
+
+```Ciphertext = 'EC5902021F04CD5183FBDB01678C8A66BD7F462491ADA0FFADDCDA205B08271F64ECCAE7C3EA7EABFA03'```
 
 ### Tài liệu tham khảo
 <https://www.ecrypt.eu.org/stream/p3ciphers/trivium/trivium_p3.pdf>
