@@ -60,7 +60,7 @@ Giả sử ta có khóa bí mật K có 20 kí tự hexa như sau: ```K = '0F62B
 
 Và một giá trị khởi tạo IV cũng có 20 kí tự hexa đảm bảo K và IV đều tạo ra một chuỗi có 80bit ```IV = '288FF65DC42B92F960C7'```
 
-khi đó ta sẽ được chuỗi bit của K và IV tương ứng là:
+Khi đó ta sẽ được chuỗi bit của K và IV theo cách biểu diễn little endian tương ứng là:
 
 ```
 K_bits = [1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0,
