@@ -1,4 +1,4 @@
-# API
+# Functions
 def _hex_to_bytes(s):
     return [_allbytes[s[i:i+2].upper()] for i in range(0, len(s), 2)]
 
