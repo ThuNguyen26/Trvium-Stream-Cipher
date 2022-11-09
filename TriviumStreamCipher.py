@@ -1,44 +1,32 @@
 # API
-
-
 def _hex_to_bytes(s):
     return [_allbytes[s[i:i+2].upper()] for i in range(0, len(s), 2)]
-
 
 def _bytes_to_hex(s):
     return ''.join(format(X, '02X') for X in s)
 
-
 def bits_to_hex(b):
     return "".join(["%02X" % sum([b[i + j] << j for j in range(8)]) for i in range(0, len(b), 8)])
-
 
 def hex_to_bits(s):
     return [(b >> i) & 1 for b in _hex_to_bytes(s) for i in range(8)]
 
-
 _allbytes = dict([("%02X" % i, i) for i in range(256)])
-
 
 def add_head(t, s):
     s.insert(0, t)
     s.pop()
 
-
 def rotate(s1, s2, s3):
-    k1 = s1[65] ^ s1[92]
-    k2 = s2[68] ^ s2[83]
-    k3 = s3[65] ^ s3[110]
+    t1 = s1[65] ^ s1[92]
+    t2 = s2[68] ^ s2[83]
+    t3 = s3[65] ^ s3[110]
+    
+    z = t1 ^ t2 ^ t3
 
-    z = k1 ^ k2 ^ k3
-
-    a1 = s1[90] & s1[91]
-    a2 = s2[81] & s2[82]
-    a3 = s3[108] & s3[109]
-
-    t1 = k1 ^ a1 ^ s2[77]
-    t2 = k2 ^ a2 ^ s3[86]
-    t3 = k3 ^ a3 ^ s1[68]
+    t1 = t1 ^ (s1[90] & s1[91]) ^ s2[77]
+    t2 = t2 ^ (s2[81] & s2[82]) ^ s3[86]
+    t3 = t3 ^ (s3[108] & s3[109]) ^ s1[68]
 
     add_head(t3, s1)
     add_head(t1, s2)
@@ -46,11 +34,9 @@ def rotate(s1, s2, s3):
 
     return z
 
-
 def init_state(s1, s2, s3):
     for i in range(4 * 288):
         rotate(s1, s2, s3)
-
 
 def key_stream(s1, s2, s3):
     for i in range(2**64):
@@ -91,10 +77,8 @@ print("Plaintext:  " + "'" + plaintext + "'")
 plaintext_dec = []
 for i in range(len(plaintext)):
     plaintext_dec.append((ord(plaintext[i])))
-print(plaintext_dec)
 print("Key stream: " + bits_to_hex(keystream))
 key_stream_dec = _hex_to_bytes(bits_to_hex(keystream))
-print(key_stream_dec)
 ciphertext = ''
 ciphertext_dec = []
 for i in range(len(plaintext)):
